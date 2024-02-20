@@ -1,0 +1,230 @@
+.promo {
+    min-height: 100vh;
+    padding: 30px 0 40px;
+    background: url('../img/main/bg.jpeg') center center / cover no-repeat;
+    &_logo {
+        display: block;
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+    &_subtitle {
+        color: $color-gold;
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 15px;
+    }
+    &_btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 90px;
+        width: 100%;
+    }
+    &_btn {
+        border-radius: 40px;
+        background: $color-green;
+        border: none;
+        width: 282px;
+        height: 64px;
+        color: $color-white;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        margin-right: 32px;
+    }
+    &_bonus {
+        width: 488px;
+        height: 64px;
+        border-radius: 40px;
+        background: $color-gradient;
+        border: none;
+        color: $color-white;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &_text {
+        display: none;
+    }
+}
+
+.arrow {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 70px;
+    height: 50px;
+    &_left {
+        position: absolute;
+        bottom: 0;
+        left: 18px;
+        display: block;
+        width: 4px;
+        height: 48px;
+        background: $color-gradient;
+        transform: rotate(135.00deg);
+    }
+    &_right {
+        position: absolute;
+        bottom: 0;
+        left: 50px;
+        display: block;
+        width: 4px;
+        height: 48px;
+        background: $color-gradient;
+        transform: rotate(-135.00deg);
+    }
+}
+
+.divider {
+    width: 650px;
+    height: 2px;
+    background: $color-gradient;
+    margin-top: 30px;
+}
+
+.menu {
+    &_list {
+        list-style-type: none;
+        padding-left: 148px;
+        display: flex;
+        justify-content: start;
+    }
+    &_link {
+        a {
+            color: $color-white;
+            font-size: 28px;
+            font-weight: 400;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding-right: 56px;
+            cursor: pointer;
+        }
+    }
+    &_close {
+        display: none;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+
+.logo {
+    &_white {
+        display: none;
+    }
+    &_subtitle {
+        display: none;
+    }
+}
+
+.work {
+    position: relative;
+    background-color: $color-green;
+    padding: 100px 0 100px 0;
+    &_block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &_certificate {
+        text-align: right;
+    }
+    &_title {
+        color: $color-white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+    }
+    &_subtitle {
+        color: $color-white;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 62px;
+        text-transform: uppercase;
+        margin: 30px 0;
+    }
+    &_rectangle {
+        width: 900px;
+        height: 346px;
+        border: 3px solid $color-gold;
+        border-right: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+    }
+}
+
+.price {
+    padding: 100px 0;
+    &_content {
+        display: none;
+        &_active {
+            width: 1140px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+    }
+    &_list {
+        position: relative;
+        list-style-type: none;
+        color: $color-black;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 64px;
+        &-divider {
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 1140px;
+                height: 2px;
+                background-color: $color-gold;
+            }
+        }
+
+    }
+
+    &_cena {
+        list-style-type: none;
+        color: $color-black;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 64px;
+        text-align-last: right;
+    }
+    &_tabs {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &_tab {
+        color: $color-black;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 62px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &_active {
+            font-weight: 500;
+            border: 3px solid $color-gold;
+            width: 300px;
+            height: 80px;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+}
+
+
