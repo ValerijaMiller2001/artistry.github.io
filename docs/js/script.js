@@ -39,3 +39,25 @@ $(document).ready(function(){
           .addClass('price_content_active');
     });
 });
+
+
+
+rules_accordion = document.querySelector('.rules_accordion')
+rules_accordion_items = rules_accordion.querySelectorAll('.rules_accordion-item')
+observer = []
+for (let i = 0; i< rules_accordion_items.length; i++){
+    object = {"key": false}
+    observer.push(object)
+}
+for (let i = 0; i< rules_accordion_items.length; i++){
+    rules_accordion_items[i].addEventListener('click', () => {
+        if ( observer[i].key === false){
+            rules_accordion_items[i].classList.add('rules_accordion-item_opened')
+            observer[i].key = true
+        }
+        else{
+            rules_accordion_items[i].classList.remove('rules_accordion-item_opened')
+            observer[i].key = false
+        }
+    })
+}

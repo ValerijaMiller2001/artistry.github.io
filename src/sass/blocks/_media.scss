@@ -5,7 +5,7 @@
             width: 70%;
         }
         &_block {
-            grid-template: repeat(7, 250px) / repeat(3, 370px);
+            grid-template: repeat(6, 250px) / repeat(3, 370px);
         }
         &_img {
             &-one {
@@ -298,6 +298,10 @@
                 width: 530px;
             }
         }
+    }
+
+    .portfolio {
+        display: none;
     }
 } 
 
