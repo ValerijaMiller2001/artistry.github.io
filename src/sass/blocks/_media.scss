@@ -78,10 +78,20 @@
 
     .portfolio {
         &_block {
-            grid-template: repeat(7, 250px) / repeat(3, 310px);
+            grid-template: repeat(6, 250px) / repeat(3, 310px);
         }
         &_rectangle {
             display: none;
+        }
+    }
+
+    .contacts {
+        &_wrapper {
+            grid-template-columns: 350px 560px;
+            gap: 50px;
+        }
+        &_maps {
+            width: 560px;
         }
     }
 }
@@ -103,19 +113,19 @@
     }
 
     .work {
-        padding: 50px 0 50px 0;
+        padding: 50px 0 20px;
         &_subtitle {
             font-size: 40px;
             margin: 15px 0;
         }
         &_rectangle {
-            height: 260px;
+            height: 205px;
             top: 31px;
         }
     }
 
     .price {
-        padding: 50px 0;
+        padding: 50px 0 0;
         &_content {
             &_active {
                 grid-template-columns: 700px;
@@ -132,9 +142,35 @@
     }
 
     .portfolio {
-        padding: 50px 0;
+        padding: 50px 0 0;
         &_block {
-            grid-template: repeat(7, 250px) / repeat(3, 240px);
+            grid-template: repeat(6, 250px) / repeat(3, 240px);
+            margin-top: 50px;
+        }
+    }
+
+    .rules {
+        padding: 50px 0 0;
+        &_wrapper {
+            gap: 15px;
+        }
+    }
+
+    .contacts {
+        padding: 50px 0 0;
+        &_wrapper {
+            grid-template-columns: 320px 380px;
+            gap: 20px;
+        }
+        &_maps {
+            width: 380px;
+            height: 480px;
+        }
+        &_tel {
+            font-size: 30px;
+        }
+        &_adress {
+            font-size: 22px;
         }
     }
 }
@@ -273,7 +309,6 @@
             border-left: none;
             border-right: 3px solid $color-gold;
             width: 80%;
-            height: 245px;
         }
     }
 
@@ -302,6 +337,43 @@
 
     .portfolio {
         display: none;
+    }
+
+    .rules {
+        &_wrapper {
+            display: block;
+        }
+        &_accordion {
+            width: 100%;
+            margin-top: 20px;
+            &-body {
+                font-size: 20px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .contacts {
+        &_wrapper {
+            display: block;
+        }
+        &_adress {
+            margin-top: 20px;
+        }
+        &_icons {
+            margin-top: 20px;
+        }
+        &_maps {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &_icons {
+            &-icon {
+                img {
+                    height: 35px;
+                }
+            }
+        }
     }
 } 
 
@@ -343,15 +415,15 @@
 
     .work {
         &_title {
-            font-size: 18px;
-            line-height: 10px;
+            font-size: 17px;
+            line-height: 21px;
         }
         &_subtitle {
-            font-size: 37px;
+            font-size: 36px;
         }
         &_rectangle {
             width: 90%;
-            height: 200px;
+            height: 195px;
         }
     }
 
@@ -359,11 +431,12 @@
         &_content {
             &_active {
                 grid-template-columns: 100%;
+                margin-top: 20px;
             }
         }
         &_text {
             &::before {
-                width: calc(100vw - 20px);
+                width: calc(100vw - 37px);
             }
         }
         &_item {
@@ -372,6 +445,15 @@
         }
         &_tab {
             font-size: 30px;
+        }
+    }
+
+    .rules {
+        &_accordion {
+            &-header {
+                font-size: 22px;
+                line-height: 26px;
+            }
         }
     }
 }

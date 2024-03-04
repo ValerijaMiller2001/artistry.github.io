@@ -1,3 +1,4 @@
+
 /* Гамбургер */
 const hamburger = document.querySelector('.hamburger'),
     menu = document.querySelector('.menu'),
@@ -61,3 +62,4 @@ for (let i = 0; i< rules_accordion_items.length; i++){
         }
     })
 }
+

@@ -99,7 +99,7 @@
 
 
 .divider {
-    width: 650px;
+    width: 670px;
     height: 2px;
     background: $color-gradient;
     margin-top: 30px;
@@ -146,7 +146,7 @@
 .work {
     position: relative;
     background-color: $color-green;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 20px;
     &_block {
         display: flex;
         justify-content: space-between;
@@ -170,7 +170,7 @@
     }
     &_rectangle {
         width: 50%;
-        height: 346px;
+        height: 250px;
         border: 3px solid $color-gold;
         border-right: none;
         position: absolute;
@@ -181,7 +181,7 @@
 }
 
 .price {
-    padding: 100px 0;
+    padding: 100px 0 0;
     &_content {
         display: none;
         &_active {
@@ -215,7 +215,6 @@
     &_money {
         text-align: right;
     }
-
     &_tabs {
         list-style-type: none;
         display: flex;
@@ -245,15 +244,7 @@
 .portfolio {
     position: relative;
     z-index: 1;
-    padding: 100px 0;
-    &_title {
-        color: $color-black;
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 62px;
-        text-align: left;
-        text-transform: uppercase;
-    }
+    padding: 100px 0 0;
     &_rectangle {
         position: absolute;
         top: 160px;
@@ -264,8 +255,7 @@
         border-right: none;
         z-index: 2;
     }
-
-     &_block {
+    &_block {
         display: grid;
         grid-template: repeat(3, 228px) / 516px 303px 677px 240px;
         gap: 10px;
@@ -317,21 +307,23 @@
 }
 
 .rules {
-    padding: 100px 0;
+    padding: 100px 0 0;
     &_wrapper {
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 10px;
     }
-    &_title {
-        color: $color-black;
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 62px;
-        text-transform: uppercase;
-    }
     &_accordion {
         position: relative;
+        &-item {
+            &:not(:first-child)::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: $color-gold;
+            }
+        }
         &-header {
             position: relative;
             color: $color-black;
@@ -340,16 +332,6 @@
             line-height: 31px;
             margin-bottom: 20px;
             cursor: pointer;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: $color-gold;  
-            }
-
             &::after {
                 content: "";
                 position: absolute;
@@ -365,12 +347,11 @@
         &-body {
             color: $color-black;
             font-size: 24px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 31px;
             margin: 10px 0;
         }
     }
-
 }
 
 .rules_accordion-item_opened .rules_accordion-header::after {
@@ -379,4 +360,55 @@
 
 .rules_accordion-item:not(.rules_accordion-item_opened) .rules_accordion-body {
     display: none;
+}
+
+.contacts {
+    padding: 100px 0 0;
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 350px 710px;
+        gap: 80px;
+    }
+    &_adress {
+        color: $color-black;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+        margin-top: 100px;
+    }
+    &_tel {
+        display: block;
+        color: $color-black;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 51px;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 15px;
+    }
+    &_icons {
+        margin-top: 78px;
+        &-icon {
+            img {
+                margin-right: 20px;
+            }
+            
+        }
+    }
+    &_maps {
+        width: 710px;
+        height: 528px;
+    }
+}
+
+.footer {
+    height: 120px;
+    background-color: $color-green;
+    padding: 41px 0;
+    &_text {
+        color: $color-white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+    }
 }

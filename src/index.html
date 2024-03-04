@@ -24,9 +24,9 @@
 
                 <nav>
                     <ul class="menu_list">
-                        <li class="menu_link"><a href="#">Прайс</a></li>
-                        <li class="menu_link"><a href="#">Отзывы</a></li>
-                        <li class="menu_link"><a href="#">Контакты</a></li>
+                        <li class="menu_link"><a href="#price">Прайс</a></li>
+                        <li class="menu_link"><a href="#portfolio">Портфолио</a></li>
+                        <li class="menu_link"><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -70,7 +70,7 @@
         </div>
     </section>
 
-    <div class="price">
+    <div class="price" id="price">
         <div class="container">
             <ul class="price_tabs">
                 <li class="price_tab price_tab_active">маникюр</li>
@@ -249,10 +249,10 @@
             </div>            
         </div>
     </div>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio_rectangle"></div>
         <div class="container">
-            <div class="portfolio_title">Наши работы</div>  
+            <div class="title">Наши работы</div>  
             <div class="portfolio_block">          
                 <div class="portfolio_img portfolio_img-one">
                     <img src="img/portfolio/1.jpeg" alt="1">
@@ -279,29 +279,86 @@
     <section class="rules">
         <div class="container">
             <div class="rules_wrapper">
-                <div class="rules_title">Правила посещения студии</div>
+                <div class="title">Правила посещения студии</div>
                 <div class="rules_accordion" id="accordion">
                     <div class="rules_accordion-item">
                         <div class="rules_accordion-header">Опоздание</div>
-                        <div class="rules_accordion-body">Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила.</div>
+                        <div class="rules_accordion-body">
+                            От 10 до 15 минут специалист успевает сделать однотонное покрытие.* <br>
+                            От 15 до 25 минут возможно покрытие камуфлирующими базами.* <br>
+                            На 30-40 минут специалист может отказать в полном объёме заявленной записи**.
+                            <br><br>
+                            *При выделенном времени на процедуру в 120 минут.
+                            **При выделенном времени 60 минут на процедуру максимальное опоздание 15 минут.
+                            <br><br>
+                            При опоздании на наращивание ресниц:
+                            На 10-20 минут мастер может предложить сделать ресницы меньшего объёма. <br>
+                            На 20 минут и более специалист может отказать в полном объёме заявленной записи
+                        </div>
                     </div>
                     <div class="rules_accordion-item">
                         <div class="rules_accordion-header">Отказ в предоставлении услуг</div>
-                        <div class="rules_accordion-body">Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила.</div>
+                        <div class="rules_accordion-body">
+                            Специалист в праве отказать в услугах, если это грозит его здоровью. <br>
+                            Специалист в праве отказать в услуге, если это грозит здоровью клиента. <br>
+                            Специалист в праве отказать в услугах, если они выходят за рамки его компетенции.
+                        </div>
                     </div>
                     <div class="rules_accordion-item">
                         <div class="rules_accordion-header">Дизайны</div>
-                        <div class="rules_accordion-body">Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила.</div>
+                        <div class="rules_accordion-body">
+                            Услуга дизайн не входит в стоимость покрытия и оплачивается дополнительно в зависимости от сложности выполнения.
+                        </div>
                     </div>
                     <div class="rules_accordion-item">
                         <div class="rules_accordion-header">Сертификат</div>
-                        <div class="rules_accordion-body">Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила. Текст правила.</div>
+                        <div class="rules_accordion-body">
+                            Номинал может быть любой от 100 ₽. <br>
+                            Срок действия сертификата 6 месяцев с момента покупки
+                        </div>
+                    </div>
+                    <div class="rules_accordion-item">
+                        <div class="rules_accordion-header">Скидки и акции</div>
+                        <div class="rules_accordion-body">
+                            *Скидка на первое посещение 500 ₽ действует на услуги : <br>
+                            -Маникюр с покрытием гель- лак <br>
+                            -Педикюр с покрытием гель -лаком <br>
+                            -Экспресс педикюр с покрытием гель-лак <br>
+                            -Наращивание ресниц <br>
+                            -Ламинирование ресниц <br>
+                            -Ламинирование бровей <br>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts_wrapper">
+                <div class="contacts_text">
+                    <div class="title">контакты</div>
+                    <div class="contacts_adress">Среднерогатская, 13, к.1, стр.1</div>
+                    <a href="tel:+79119455757" class="contacts_tel">+7 (911) 945-57-57</a>
+                    <div class="contacts_icons">
+                        <a href="#" class="contacts_icons-icon"><img src="icons/black/vk.svg" alt="vk"></a>
+                        <a href="#" class="contacts_icons-icon"><img src="icons/black/instagramm.svg" alt="instagramm"></a>
+                    </div>
+                </div>
+                <div>
+                    <iframe class="contacts_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2005.6448571457847!2d30.328192602581964!3d59.821819620103874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696258d8383f19d%3A0x45839325843f5b83!2z0KHRgNC10LTQvdC10YDQvtCz0LDRgtGB0LrQsNGPINGD0LsuLCAxM9C6MiwgMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTk2MTU4!5e0!3m2!1sru!2srs!4v1709558201026!5m2!1sru!2srs" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_text">© The Artistry 2023</div>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/script.js"></script>
