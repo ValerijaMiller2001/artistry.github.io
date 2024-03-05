@@ -412,3 +412,159 @@
         line-height: 31px;
     }
 }
+
+.carousel {
+    position: relative;
+    padding: 100px 0 20px;
+    &_wrapper {
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        height: 600px;
+    }
+    &_img {
+        width: 500px;
+        height: 600px;
+        display: none;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &_active {
+            display: block;
+        }
+    }
+    &_arrow {
+        position: relative;
+        &_prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(90.00deg);
+            left: 0;
+        
+        }
+        &_next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90.00deg);
+            right: 0;
+        }
+    }
+}
+
+
+
+.consultation {
+    padding: 100px 0 0;
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 700px 350px;
+        gap: 90px;
+    }
+    &_descr {
+        color: $color-black;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 51px;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    z-index: 5;
+    input, textarea {
+        width: 350px;
+        height: 50px;
+        margin-top: 20px;
+        border-color: $color-green;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: $color-white;
+
+        color: $color-black;
+        font-size: 20px;
+        font-weight: 400;
+        resize: none;
+    }
+    &_btn {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 350px;
+    }
+    &_gold {
+        font-size: 20px;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: 5;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    background-color: $color-white;
+    border: 2px solid $color-green;
+    padding: 10px;
+    z-index: 5;
+    &_gold {
+        border: 2px solid $color-gold;
+    }
+    &_close {
+        color: $color-green;
+        font-size: 50px;
+        position: absolute;
+        top: -29px;
+        right: -35px;
+        cursor: pointer;
+        &_gold {
+            color: $color-gold
+        }
+    }
+    &_subtitle {
+        color: $color-black;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &_descr {
+        color: $color-black;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 10px;
+        text-align: center;
+    }
+    &_form {
+        margin: auto 15px;
+        &_gold {
+            input {
+                border-color: $color-gold;
+            }
+        }
+    }
+}
+
+#consultation, #card, #thanks, #thanks_card {
+    display: none;
+}

@@ -1,3 +1,4 @@
+// const { active } = require("browser-sync");
 
 /* Гамбургер */
 const hamburger = document.querySelector('.hamburger'),
@@ -39,9 +40,22 @@ $(document).ready(function(){
           .eq($(this).index())
           .addClass('price_content_active');
     });
+
+    /* Модальные окна */
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('[data-modal=card]').on('click', function() {
+        $('.overlay, #card').fadeIn('slow');
+    });
+    $('.modal_close').on('click', function() {
+        $('.overlay, #consultation, #card, #thanks').fadeOut('slow');
+    });
+
 });
 
-
+/* Аккордеон */
 
 rules_accordion = document.querySelector('.rules_accordion')
 rules_accordion_items = rules_accordion.querySelectorAll('.rules_accordion-item')
@@ -63,3 +77,69 @@ for (let i = 0; i< rules_accordion_items.length; i++){
     })
 }
 
+
+
+
+
+
+// //Тут мы получаем индекс элемента, у которого есть класс 'carousel_img_active'
+// function getIndex(slide_array) {
+//     let index = 0
+//     for ( let i = 0; i< slide_array.length; i++){
+//         if ( 'carousel_img_active' in slide_array[i]){
+//             index = i
+//         }
+//     }
+//     //Вовзращаем index(число, которому сопроставлен элемент в массиве)
+//     return index
+// }
+
+//Находим левую стрелку
+/* const arrowPrev = document.querySelector('.carousel_arrow_prev');
+//Находим правую стрелку
+const arrowNext = document.querySelector('.carousel_arrow_next');
+//Находим элемент который содержит несколько кнопок(нам надо получить массив)
+// const carouselWrapper = document.querySelector('.carousel_wrapper');
+// Находим все картинки в carouselWrapper(получаем массив, это когда ты можешь обращаться к ним по индексу)
+let slide = document.querySelectorAll('.carousel_img')
+// Задаем индекс для активного слайда, когда запускаешь сайт - он равен 0
+let activeSlide = 0
+// Добавляем действие при нажатии на правую стрелку находим активный элемент, менаяем свойсва. И добавляем видимость следующему
+// до те пор пока индекс меншье 5(если прибаляешь 1), если нет, то все по новой 
+arrowNext.addEventListener(('click'), () =>{
+    if (activeSlide + 1 < slide.length){
+        slide[activeSlide].style.opacity = '0'
+        slide[activeSlide].style.display = 'none'
+        slide[activeSlide + 1].style.display = 'block'
+        slide[activeSlide + 1].style.opacity = '100'
+        slide[activeSlide + 1].style.transition = '1s'
+        activeSlide +=1
+    }
+    else{
+        
+        slide[activeSlide].style.display = 'none'
+        activeSlide = 0
+        slide[activeSlide].style.display = 'block'
+        slide[activeSlide].style.opacity = '100'
+
+
+    }
+})
+// Добавляем действие при нажатии на левую стрелку
+arrowPrev.addEventListener(('click'), () => {
+    if (activeSlide + 1 < slide.length){
+        slide[activeSlide].style.opacity = '0'
+        slide[activeSlide].style.display = 'none'
+        slide[activeSlide + 1].style.display = 'block'
+        slide[activeSlide + 1].style.opacity = '100'
+        slide[activeSlide + 1].style.transition = '1s'
+        activeSlide +=1
+    }
+    else{
+        
+        slide[activeSlide].style.display = 'none'
+        activeSlide = 0
+        slide[activeSlide].style.display = 'block'
+        slide[activeSlide].style.opacity = '100'
+    }
+}) */
