@@ -53,6 +53,35 @@ $(document).ready(function(){
         $('.overlay, #consultation, #card, #thanks').fadeOut('slow');
     });
 
+/*     Маска телефона и даты */
+
+    $("input[name=date]").mask("99.99.9999");
+    $("input[name=phone]").mask("+7 (999) 999-99-99");
+
+/*     Скрипт для отправки форм на сайте */
+
+    $('form').submit(function(e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+        return;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation, #card').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+
+        $('form').trigger('reset');
+    });
+    return false;
+    });
+
+
 });
 
 /* Аккордеон */

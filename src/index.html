@@ -344,9 +344,10 @@
                     <div class="consultation_descr">И мы свяжемся с вами в ближайшее время!</div>
                 </div>
                 <div class="consultation_form">
-                    <form action="#" class="form">
+                    <form action="#" class="form" id="consultation_form">
                         <input name="name" type="text" placeholder="Ваше имя" required>
-                        <input name="phone" type="phone" placeholder="Ваш телефон" required>
+                        <input name="phone" placeholder="Ваш телефон" required>
+                        <textarea name="coment" type="text" placeholder="Сообщение"></textarea>
                         <button class="promo_btn form_btn">Записаться</button>
 
                     </form>
@@ -404,8 +405,8 @@
             <div class="modal_descr">500 рублей на первое посещение!</div>
             <form class="form modal_form modal_form_gold" action="#">
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input type="data" name="data" required placeholder="Дата рождения"> 
-                <input name="phone" required placeholder="Ваш телефон">
+                <input name="date" required placeholder="Дата рождения"> 
+                <input name="phone" required placeholder="Ваш телефон" type="phone">
             
                 <button class="promo_bonus form_btn form_gold">оформить бонусную карту</button>
             </form>
@@ -444,6 +445,8 @@
     </section> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
