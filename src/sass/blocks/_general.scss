@@ -413,7 +413,7 @@
     }
 }
 
-.carousel {
+/* .carousel {
     position: relative;
     padding: 100px 0 20px;
     &_wrapper {
@@ -452,7 +452,7 @@
             right: 0;
         }
     }
-}
+} */
 
 
 
@@ -478,7 +478,6 @@
     flex-direction: column;
     justify-content: center;
     width: 350px;
-    z-index: 5;
     input, textarea {
         width: 350px;
         height: 50px;
@@ -497,9 +496,19 @@
         margin: 0 auto;
         margin-top: 20px;
         width: 350px;
+        border-radius: 40px;
+        background: $color-green;
+        border: none;
+        height: 64px;
+        color: $color-white;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
     }
     &_gold {
         font-size: 20px;
+        background: $color-gradient;
     }
 }
 
@@ -558,6 +567,38 @@
     }
     &_form {
         margin: auto 15px;
+        &_btn {
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 350px;
+            border-radius: 40px;
+            background: $color-green;
+            border: none;
+            height: 64px;
+            color: $color-white;
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+            text-transform: uppercase;
+            &_gold {
+                font-size: 20px;
+                background: $color-gradient;
+            }
+        }
+        input, textarea {
+            width: 350px;
+            height: 50px;
+            margin-top: 20px;
+            border-color: $color-green;
+            border-radius: 15px;
+            padding: 5px;
+            background-color: $color-white;
+    
+            color: $color-black;
+            font-size: 20px;
+            font-weight: 400;
+            resize: none;
+        }
         &_gold {
             input {
                 border-color: $color-gold;

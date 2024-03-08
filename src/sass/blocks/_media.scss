@@ -94,6 +94,13 @@
             width: 560px;
         }
     }
+
+    .consultation {
+        &_wrapper {
+            grid-template-columns: 600px 350px;
+            gap: 10px;
+        }
+    }
 }
     
 @media (max-width: 992px) {
@@ -173,6 +180,16 @@
             font-size: 22px;
         }
     }
+
+    .consultation {
+        padding: 50px 0 0;
+        &_wrapper {
+            grid-template-columns: 360px 350px;
+            gap: 10px;
+        }
+    }
+
+
 }
     
 @media (max-width: 768px) {
@@ -336,7 +353,15 @@
     }
 
     .portfolio {
-        display: none;
+        &_block {
+            grid-template: repeat(2, 260px) / repeat(2, 260px);
+            grid-auto-rows: 260px;
+            
+        }
+        &_img {
+            grid-row: unset;
+            grid-column: unset;
+        }
     }
 
     .rules {
@@ -373,6 +398,21 @@
                     height: 35px;
                 }
             }
+        }
+    }
+
+    .consultation {
+        &_wrapper {
+            display: block;
+        }
+        &_descr {
+            text-align: center;
+            line-height: 27px;
+            font-size: 20px;
+        }
+        &_form {
+            display: flex;
+            justify-content: center;
         }
     }
 } 
@@ -436,7 +476,7 @@
         }
         &_text {
             &::before {
-                width: calc(100vw - 37px);
+                width: calc(100vw - 20px);
             }
         }
         &_item {
@@ -448,6 +488,12 @@
         }
     }
 
+    .portfolio {
+        &_block {
+            grid-template: repeat(2, 280px) / 300px; 
+        }
+    }
+
     .rules {
         &_accordion {
             &-header {
@@ -456,4 +502,43 @@
             }
         }
     }
+
+    .form {
+        width: 300px;
+        input, textarea {
+            width: 300px;
+        }
+        &_btn {
+            width: 300px;
+        }
+    }
+
+    .modal {
+        width: 300px;
+
+        &_close {
+            top: -54px;
+            right: -4px;
+        }
+        &_subtitle {
+            line-height: 25px;
+        }
+        &_descr {
+            line-height: 20px;
+        }
+        &_form {
+            margin: 0;
+            input, textarea {
+                width: 276px;
+            }
+            &_btn {
+                width: 276px;
+                &_gold {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+
 }
