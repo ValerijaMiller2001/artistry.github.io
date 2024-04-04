@@ -1,45 +1,88 @@
 // const { active } = require("browser-sync");
+window.addEventListener('DOMContentLoaded', () => {
+    /* Гамбургер */
+    const hamburger = document.querySelector('.hamburger'),
+        menu = document.querySelector('.menu'),
+        closeElem = document.querySelector('.menu_close');
+        menuList = document.querySelector('.menu_list');
+        items = menuList.querySelectorAll('.menu_link');
 
-/* Гамбургер */
-const hamburger = document.querySelector('.hamburger'),
-    menu = document.querySelector('.menu'),
-    closeElem = document.querySelector('.menu_close');
-    menuList = document.querySelector('.menu_list');
-    items = menuList.querySelectorAll('.menu_link');
+    hamburger.addEventListener('click', () => {
+        document.body.classList.toggle('_lock');
+        menu.classList.add('active');
+    });
 
-hamburger.addEventListener('click', () => {
-    document.body.classList.toggle('_lock');
-    menu.classList.add('active');
-});
-
-closeElem.addEventListener('click', () => {
-    menu.classList.remove('active');
-    document.body.classList.remove('_lock');
-});
-
-for (let i=0; i< items.length; i++){
-    items[i].addEventListener('click', () => {
+    closeElem.addEventListener('click', () => {
         menu.classList.remove('active');
         document.body.classList.remove('_lock');
     });
-}
+
+    for (let i=0; i< items.length; i++){
+        items[i].addEventListener('click', () => {
+            menu.classList.remove('active');
+            document.body.classList.remove('_lock');
+        });
+    }
+
+    /* Табы */
+
+    const tabs = document.querySelectorAll('.price_tab');
+    const tabsContent = document.querySelectorAll('.price_content');
+    const tabsParent = document.querySelector('.price_tabs');
+
+    function hideTabContent() {
+        tabsContent.forEach(item => {
+            item.classList.add('price_hide');
+            item.classList.remove('price_show', 'price_fade');
+            tabs.forEach(item => {
+                item.classList.remove('price_tab_active');
+            })
+        });
+    }
+
+    function showTabContent(i = 0) {
+        tabsContent[i].classList.add('price_show', 'price_fade');
+        tabsContent[i].classList.remove('price_hide');
+        tabs[i].classList.add('price_tab_active');
+    }
+    hideTabContent();
+    showTabContent();
+
+    tabsParent.addEventListener('click' , (event) => {
+        const target = event.target;
+        if (target && target.classList.contains('price_tab')) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            }); 
+        }
+    });
+
+});
 
 
-/* Табы */
+
+
+
+
+
+
 
 
 $(document).ready(function(){
-    $('ul.price_tabs').on('click', 'li:not(.price_tab_active)', function() {
-        $(this)
-          .addClass('price_tab_active')
-          .siblings()
-          .removeClass('price_tab_active')
-          .closest('div.container')
-          .find('div.price_content')
-          .removeClass('price_content_active')
-          .eq($(this).index())
-          .addClass('price_content_active');
-    });
+    // $('ul.price_tabs').on('click', 'li:not(.price_tab_active)', function() {
+    //     $(this)
+    //       .addClass('price_tab_active')
+    //       .siblings()
+    //       .removeClass('price_tab_active')
+    //       .closest('div.container')
+    //       .find('div.price_content')
+    //       .removeClass('price_content_active')
+    //       .eq($(this).index())
+    //       .addClass('price_content_active');
+    // });
 
     /* Модальные окна */
 
